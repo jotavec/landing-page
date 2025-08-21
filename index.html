@@ -51,7 +51,7 @@
 
         /* Styles for the active toggle button */
         .toggle-btn.active {
-            background-color: #1E293B; /* bg-slate-700 */
+            background: linear-gradient(90deg, #4f46e5, #ec4899, #f97316);
             color: white;
         }
     </style>
@@ -273,12 +273,10 @@
 
                 <!-- Pricing Toggle -->
                 <div class="flex justify-center items-center mb-12" data-aos="fade-up">
-                    <div class="bg-slate-900 p-1 rounded-full flex items-center space-x-1">
+                    <div class="bg-slate-900 p-1 rounded-full flex items-center space-x-1 relative">
                         <button id="monthly-btn" class="toggle-btn px-6 py-2 rounded-full text-slate-300 font-semibold transition-colors">Mensal</button>
-                        <button id="yearly-btn" class="toggle-btn active px-6 py-2 rounded-full text-slate-300 font-semibold transition-colors relative">
-                            Anual
-                            <span class="absolute top-0 right-0 -mt-2 -mr-4 bg-pink-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">Economize 20%</span>
-                        </button>
+                        <button id="yearly-btn" class="toggle-btn active px-6 py-2 rounded-full text-slate-300 font-semibold transition-colors">Anual</button>
+                        <span class="absolute -top-4 right-0 gradient-bg text-white text-xs font-bold px-2 py-0.5 rounded-full transform rotate-6 -mr-2">Economize 20%</span>
                     </div>
                 </div>
 
@@ -474,4 +472,4 @@
       });
     </script>
 </body>
-</ht
+</html>
