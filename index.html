@@ -16,7 +16,7 @@
     <!-- Animate On Scroll (AOS) Library for animations -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
-    <!-- Favicon (using the new logo icon) -->
+    <!-- Favicon -->
     <link rel="icon" href="/landing-page-calculaai/images/logo-icone.png" type="image/png">
 
     <style>
@@ -263,7 +263,7 @@
             </div>
         </section>
 
-        <!-- =========== Pricing Plans Section =========== -->
+        <!-- =========== Pricing Plans Section (UPDATED) =========== -->
         <section id="planos" class="py-24">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16" data-aos="fade-up">
@@ -275,20 +275,24 @@
                 <div class="flex justify-center items-center mb-12" data-aos="fade-up">
                     <div class="bg-slate-900 p-1 rounded-full flex items-center space-x-1 relative">
                         <button id="monthly-btn" class="toggle-btn px-6 py-2 rounded-full text-slate-300 font-semibold transition-colors">Mensal</button>
-                        <button id="yearly-btn" class="toggle-btn active px-6 py-2 rounded-full text-slate-300 font-semibold transition-colors">Anual</button>
-                        <span class="absolute -top-4 right-0 gradient-bg text-white text-xs font-bold px-2 py-0.5 rounded-full transform rotate-6 -mr-2">Economize 20%</span>
+                        <button id="yearly-btn" class="toggle-btn active px-6 py-2 rounded-full font-semibold transition-colors">Anual</button>
+                        <span class="absolute -top-5 right-0 gradient-bg text-white text-xs font-bold px-2 py-0.5 rounded-full transform rotate-6 -mr-4">Economize 20%</span>
                     </div>
                 </div>
 
                 <div class="grid lg:grid-cols-3 gap-8 max-w-5xl mx-auto items-stretch">
                     <!-- Plano Free -->
                     <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 flex flex-col" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="text-2xl font-bold mb-2">Free</h3>
+                        <h3 class="text-2xl font-bold mb-2">Gratuito</h3>
                         <p class="text-slate-400 mb-6">Para quem está começando.</p>
                         <p class="text-4xl font-extrabold mb-6">R$0</p>
                         <ul class="space-y-4 text-slate-300 mb-8 flex-grow">
-                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Cadastro de até 5 produtos</li>
-                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Cálculo com markup simples</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>30 cadastros de matéria-prima</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>5 receitas</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Monitore seu lucro</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Simulação de preço</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>1 bloco de markup</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Suporte humanizado</li>
                         </ul>
                         <a href="https://app.calculaaibr.com/" target="_blank" class="w-full text-center py-3 px-6 bg-slate-700 text-white font-bold rounded-lg hover:bg-slate-600 transition-colors mt-auto">Começar Agora</a>
                     </div>
@@ -304,29 +308,30 @@
                             <p class="price-desc text-slate-500 mb-6 text-sm">no plano anual</p>
                         </div>
                         <ul class="space-y-4 text-slate-300 mb-8 flex-grow">
-                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Cálculos avançados (markup + lucro)</li>
-                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Produtos e receitas ilimitados</li>
-                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Gestão de despesas por categoria</li>
-                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Impressão de receitas prontas</li>
-                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Evolução com a Comunidade</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Cadastro ilimitado de matéria-prima</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>60 receitas</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Movimentação de estoque</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>3 blocos de markup</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Impressão de receitas em PDF (80/mês)</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Sistema em desenvolvimento</li>
                         </ul>
                         <a href="https://app.calculaaibr.com/" target="_blank" class="w-full text-center py-3 px-6 gradient-bg text-white font-bold rounded-lg hover:shadow-lg hover:shadow-pink-500/20 transition-all transform hover:-translate-y-0.5 mt-auto">Escolher Plano Profissional</a>
                     </div>
                     <!-- Plano Empresarial -->
                     <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 flex flex-col" data-aos="fade-up" data-aos-delay="300">
                         <h3 class="text-2xl font-bold mb-2">Empresarial</h3>
-                        <p class="text-slate-400 mb-6">Para negócios com equipes e maior volume.</p>
-                         <div class="price-container" data-monthly-price="89,90" data-yearly-price="69,90">
+                        <p class="text-slate-400 mb-6">Para negócios com maior volume.</p>
+                         <div class="price-container" data-monthly-price="89,90" data-yearly-price="59,90">
                             <p class="text-4xl font-extrabold mb-1">
-                                R$<span class="price-value">69,90</span><span class="text-base font-normal text-slate-400">/mês</span>
+                                R$<span class="price-value">59,90</span><span class="text-base font-normal text-slate-400">/mês</span>
                             </p>
                             <p class="price-desc text-slate-500 mb-6 text-sm">no plano anual</p>
                         </div>
                         <ul class="space-y-4 text-slate-300 mb-8 flex-grow">
-                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span><strong>Tudo do Profissional</strong></li>
-                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Acesso multiusuário (2-5 logins)</li>
-                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Relatórios avançados com gráficos</li>
-                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Exportação em PDF/Excel</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span><strong>Tudo do Profissional, mais:</strong></li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Receitas ilimitadas</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Blocos de markup ilimitados</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Impressão de receitas em PDF (ilimitado)</li>
                             <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Suporte prioritário</li>
                         </ul>
                         <a href="https://contate.me/5562992622545" target="_blank" class="w-full text-center py-3 px-6 bg-slate-700 text-white font-bold rounded-lg hover:bg-slate-600 transition-colors mt-auto">Falar com Vendas</a>
@@ -473,3 +478,4 @@
     </script>
 </body>
 </html>
+
