@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://calculaaibr.netlify.app/sitemap.xml
+Sitemap: https://calculaaibr.netlify.app/sitemap.txt
