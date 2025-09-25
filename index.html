@@ -272,7 +272,6 @@
             <h3 class="text-2xl font-bold mb-2 gradient-text">Profissional</h3>
             <p class="text-slate-400 mb-6">Para quem quer crescer com segurança.</p>
 
-            <!-- preços controlados por JS -->
             <div class="price-container" data-monthly-price="49,90" data-annual-total="478,80">
               <p class="text-4xl font-extrabold mb-1">
                 R$<span class="price-value">478,80</span><span class="price-unit text-base font-normal text-slate-400">/Ano</span>
@@ -290,7 +289,11 @@
               <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Impressão de receitas em PDF (80/mês)</li>
               <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Sistema em desenvolvimento</li>
             </ul>
-            <a href="https://calculaaibr.com/" target="_blank" class="w-full text-center py-3 px-6 gradient-bg text-white font-bold rounded-lg hover:shadow-lg hover:shadow-pink-500/20 transition-all transform hover:-translate-y-0.5 mt-auto">Escolher Plano Profissional</a>
+            <!-- Botão com id para JS trocar os links -->
+            <a id="btnPro" href="https://buy.stripe.com/00w7sK617gbF6kNdgJcZa05"
+               class="w-full text-center py-3 px-6 gradient-bg text-white font-bold rounded-lg hover:shadow-lg hover:shadow-pink-500/20 transition-all transform hover:-translate-y-0.5 mt-auto">
+              Escolher Plano Profissional
+            </a>
           </div>
 
           <!-- Empresarial -->
@@ -298,7 +301,6 @@
             <h3 class="text-2xl font-bold mb-2">Empresarial</h3>
             <p class="text-slate-400 mb-6">Para negócios com maior volume.</p>
 
-            <!-- preços controlados por JS -->
             <div class="price-container" data-monthly-price="89,90" data-annual-total="838,80">
               <p class="text-4xl font-extrabold mb-1">
                 R$<span class="price-value">838,80</span><span class="price-unit text-base font-normal text-slate-400">/Ano</span>
@@ -313,7 +315,11 @@
               <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Impressão de receitas em PDF (ilimitado)</li>
               <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Suporte prioritário</li>
             </ul>
-            <a href="https://contate.me/5562992622545" target="_blank" class="w-full text-center py-3 px-6 bg-slate-700 text-white font-bold rounded-lg hover:bg-slate-600 transition-colors mt-auto">Falar com Vendas</a>
+            <!-- Substitui "Falar com Vendas" por botão com link -->
+            <a id="btnEmp" href="https://buy.stripe.com/7sY14m1KRgbF6kN0tXcZa04"
+               class="w-full text-center py-3 px-6 gradient-bg text-white font-bold rounded-lg hover:shadow-lg hover:shadow-pink-500/20 transition-all transform hover:-translate-y-0.5 mt-auto">
+              Escolher Plano Empresarial
+            </a>
           </div>
         </div>
       </div>
@@ -393,10 +399,30 @@
   <script>
     AOS.init({ duration: 800, once: true, offset: 50 });
 
+    // === LINKS REAIS DA STRIPE ===
+    const LINKS = {
+      monthly: {
+        pro: "https://buy.stripe.com/aFa28qcpv9Nh6kN7WpcZa02",   // Pro Mensal
+        emp: "https://buy.stripe.com/bJe28qahn1gLeRj7WpcZa03"    // Empresarial Mensal
+      },
+      annual: {
+        pro: "https://buy.stripe.com/00w7sK617gbF6kNdgJcZa05",   // Pro Anual
+        emp: "https://buy.stripe.com/7sY14m1KRgbF6kN0tXcZa04"    // Empresarial Anual
+      }
+    };
+
     document.addEventListener('DOMContentLoaded', () => {
       const monthlyBtn = document.getElementById('monthly-btn');
       const yearlyBtn  = document.getElementById('yearly-btn');
       const priceContainers = document.querySelectorAll('.price-container');
+      const btnPro = document.getElementById('btnPro');
+      const btnEmp = document.getElementById('btnEmp');
+
+      function applyPlanLinks(period) {
+        const cycle = (period === 'monthly') ? 'monthly' : 'annual';
+        if (btnPro) btnPro.href = LINKS[cycle].pro;
+        if (btnEmp) btnEmp.href = LINKS[cycle].emp;
+      }
 
       function updatePrices(billingPeriod) {
         priceContainers.forEach(container => {
@@ -420,17 +446,24 @@
         monthlyBtn.classList.add('active');
         yearlyBtn.classList.remove('active');
         updatePrices('monthly');
+        applyPlanLinks('monthly');
       });
 
       yearlyBtn.addEventListener('click', () => {
         yearlyBtn.classList.add('active');
         monthlyBtn.classList.remove('active');
         updatePrices('yearly');
+        applyPlanLinks('yearly');
       });
 
-      // inicia com "Anual" ativo (como na sua página)
-      if (yearlyBtn.classList.contains('active')) updatePrices('yearly');
-      else updatePrices('monthly');
+      // Inicia com "Anual" ativo (como na UI)
+      if (yearlyBtn.classList.contains('active')) {
+        updatePrices('yearly');
+        applyPlanLinks('yearly');
+      } else {
+        updatePrices('monthly');
+        applyPlanLinks('monthly');
+      }
 
       // FAQ accordion
       const faqItems = document.querySelectorAll('.faq-item');
