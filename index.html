@@ -1,489 +1,487 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CalculaAi - Precificação Inteligente para o seu Negócio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalculaAi - Precificação Inteligente para o seu Negócio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Animate On Scroll (AOS) Library for animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/landing-page-calculaai/images/logo-icone.png" type="image/png">
 
-  <!-- Meta SEO -->
-  <meta name="description" content="O Calcula Ai é um sistema de precificação inteligente para pequenos e médios negócios. Substitua planilhas, calcule preços com margem ideal e aumente sua lucratividade." />
-  <meta name="keywords" content="precificação, calculadora de custos, ficha técnica, controle de receitas, markup, confeitaria, panificação, food service" />
-  <meta name="author" content="Calcula Ai" />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://calculaaibr.com/" />
+    <style>
+        /* Custom styles to apply the Inter font */
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #0F172A; /* bg-slate-900 */
+        }
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Calcula Ai - Precificação Inteligente para o seu Negócio" />
-  <meta property="og:description" content="Pare de chutar preços. O CalculaAi automatiza a precificação e aumenta seu lucro." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://calculaaibr.com" />
-  <meta property="og:image" content="https://calculaaibr.com/landing-page-calculaai/images/logo-completa.png" />
+        /* Custom gradient text */
+        .gradient-text {
+            background: linear-gradient(90deg, #4f46e5, #ec4899, #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Calcula Ai - Precificação Inteligente" />
-  <meta name="twitter:description" content="Automatize sua precificação e aumente sua lucratividade com o Calcula Ai." />
-  <meta name="twitter:image" content="https://calculaaibr.com/landing-page-calculaai/images/logo-completa.png" />
+        /* Custom gradient for buttons and borders */
+        .gradient-bg {
+            background: linear-gradient(90deg, #4f46e5, #ec4899, #f97316);
+        }
+        
+        /* Minimalist gradient border for the highlighted plan */
+        .gradient-border-top {
+            border-top: 3px solid;
+            border-image-slice: 1;
+            border-image-source: linear-gradient(90deg, #4f46e5, #ec4899, #f97316);
+        }
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="/landing-page-calculaai/images/logo-icone.png" type="image/png" />
-
-  <style>
-    body{font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background-color:#0F172A}
-    .gradient-text{background:linear-gradient(90deg,#4f46e5,#ec4899,#f97316);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-fill-color:transparent}
-    .gradient-bg{background:linear-gradient(90deg,#4f46e5,#ec4899,#f97316)}
-    .gradient-border-top{border-top:3px solid;border-image-slice:1;border-image-source:linear-gradient(90deg,#4f46e5,#ec4899,#f97316)}
-    .toggle-btn.active{background:linear-gradient(90deg,#4f46e5,#ec4899,#f97316);color:#fff}
-  </style>
+        /* Styles for the active toggle button */
+        .toggle-btn.active {
+            background: linear-gradient(90deg, #4f46e5, #ec4899, #f97316);
+            color: white;
+        }
+    </style>
 </head>
 <body class="bg-slate-900 text-white">
 
-  <!-- Header -->
-  <header class="fixed top-0 left-0 w-full bg-slate-900 bg-opacity-70 backdrop-blur-lg z-50 transition-all duration-300">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="flex items-center">
-        <img src="/landing-page-calculaai/images/logo-completa.png" alt="Logo CalculaAi" class="h-12 w-auto" />
-      </div>
-      <nav class="hidden md:flex items-center space-x-8 text-slate-300">
-        <a href="#como-funciona" class="hover:text-white transition-colors">Como Funciona</a>
-        <a href="#depoimentos" class="hover:text-white transition-colors">Depoimentos</a>
-        <a href="#planos" class="hover:text-white transition-colors">Planos</a>
-        <a href="#faq" class="hover:text-white transition-colors">Dúvidas</a>
-      </nav>
-      <a href="https://calculaaibr.com/" target="_blank" class="px-5 py-2 text-white font-semibold rounded-lg gradient-bg hover:shadow-lg hover:shadow-pink-500/20 transition-all transform hover:-translate-y-0.5">
-        Acessar Sistema
-      </a>
-    </div>
-  </header>
+    <!-- =========== Header =========== -->
+    <header class="fixed top-0 left-0 w-full bg-slate-900 bg-opacity-70 backdrop-blur-lg z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="/landing-page-calculaai/images/logo-completa.png" alt="Logo CalculaAi" class="h-12 w-auto">
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 text-slate-300">
+                <a href="#como-funciona" class="hover:text-white transition-colors">Como Funciona</a>
+                <a href="#depoimentos" class="hover:text-white transition-colors">Depoimentos</a>
+                <a href="#planos" class="hover:text-white transition-colors">Planos</a>
+                <a href="#faq" class="hover:text-white transition-colors">Dúvidas</a>
+            </nav>
+            <a href="https://app.calculaaibr.com/" target="_blank" class="px-5 py-2 text-white font-semibold rounded-lg gradient-bg hover:shadow-lg hover:shadow-pink-500/20 transition-all transform hover:-translate-y-0.5">
+                Acessar Sistema
+            </a>
+        </div>
+    </header>
 
-  <main>
-    <!-- Hero -->
-    <section class="relative pt-36 pb-24 md:pt-40 md:pb-36 overflow-hidden">
-      <div class="absolute -top-1/2 -left-1/4 w-full h-full opacity-10 blur-xl">
-        <img src="/landing-page-calculaai/images/logo-icone.png" alt="Background swirl" class="w-full h-full object-contain" />
-      </div>
-      <div class="container mx-auto px-6 relative z-10">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div class="text-center md:text-left">
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4" data-aos="fade-right">
-              Pare de chutar preços. <span class="gradient-text">Lucre de verdade.</span>
-            </h1>
-            <p class="text-lg md:text-xl text-slate-300 max-w-xl mx-auto md:mx-0 mb-10" data-aos="fade-right" data-aos-delay="200">
-              O CalculaAi substitui suas planilhas e automatiza a precificação para você nunca mais perder dinheiro sem perceber.
+    <main>
+        <!-- =========== Hero Section =========== -->
+        <section class="relative pt-36 pb-24 md:pt-40 md:pb-36 overflow-hidden">
+            <div class="absolute -top-1/2 -left-1/4 w-full h-full opacity-10 blur-xl">
+                 <img src="/landing-page-calculaai/images/logo-icone.png" alt="Background swirl" class="w-full h-full object-contain">
+            </div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="text-center md:text-left">
+                        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4" data-aos="fade-right">
+                            Pare de chutar preços. <span class="gradient-text">Lucre de verdade.</span>
+                        </h1>
+                        <p class="text-lg md:text-xl text-slate-300 max-w-xl mx-auto md:mx-0 mb-10" data-aos="fade-right" data-aos-delay="200">
+                            O CalculaAi substitui suas planilhas e automatiza a precificação para você nunca mais perder dinheiro sem perceber.
+                        </p>
+                        <div class="flex flex-col sm:flex-row justify-center md:justify-start items-center space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-right" data-aos-delay="400">
+                            <a href="#planos" class="w-full sm:w-auto px-8 py-4 text-white font-bold rounded-lg gradient-bg hover:shadow-lg hover:shadow-pink-500/20 transition-all transform hover:-translate-y-0.5 text-lg">
+                                Conhecer Planos
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden md:block" data-aos="fade-left">
+                        <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 backdrop-blur-sm">
+                            <div class="bg-slate-900 p-6 rounded-lg">
+                                <div class="flex justify-between items-center mb-4">
+                                    <span class="text-slate-300 font-semibold">Bolo de Brigadeiro (1.5kg)</span>
+                                    <span class="px-2 py-1 text-xs bg-green-500/20 text-green-400 rounded-full">Lucro: 35%</span>
+                                </div>
+                                
+                                <!-- Descriptive Costs -->
+                                <div class="space-y-4 text-sm">
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-slate-400">Insumos (Farinha, Ovos, etc.)</span>
+                                        <span class="text-white font-medium">R$ 32,50</span>
+                                    </div>
+                                    <div class="w-full bg-slate-700 rounded-full h-2">
+                                        <div class="bg-blue-500 h-2 rounded-full" style="width: 50%"></div>
+                                    </div>
+
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-slate-400">Custos Fixos (Gás, Energia)</span>
+                                        <span class="text-white font-medium">R$ 18,80</span>
+                                    </div>
+                                    <div class="w-full bg-slate-700 rounded-full h-2">
+                                        <div class="bg-pink-500 h-2 rounded-full" style="width: 30%"></div>
+                                    </div>
+
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-slate-400">Embalagem + Mão de Obra</span>
+                                        <span class="text-white font-medium">R$ 15,00</span>
+                                    </div>
+                                    <div class="w-full bg-slate-700 rounded-full h-2">
+                                        <div class="bg-orange-500 h-2 rounded-full" style="width: 20%"></div>
+                                    </div>
+                                </div>
+                                <!-- End Descriptive Costs -->
+
+                                <hr class="border-slate-700 my-5">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-slate-400">Preço de Venda Ideal</span>
+                                    <span class="text-2xl font-bold gradient-text">R$ 95,70</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== How it Works (Z-Pattern) Section =========== -->
+        <section id="como-funciona" class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-3">Sua precificação, finalmente <span class="gradient-text">simples e visual</span></h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto">Transforme dados confusos em decisões lucrativas.</p>
+                </div>
+
+                <!-- Benefit 1 -->
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+                    <div data-aos="fade-right">
+                        <h3 class="text-3xl font-bold my-3">✅ Adeus, Planilhas!</h3>
+                        <p class="text-slate-400 text-lg">Insira seus custos, insumos e despesas em um só lugar. O sistema faz os cálculos complexos por você, de forma automática e sem erros.</p>
+                    </div>
+                    <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700" data-aos="zoom-in-left">
+                        <div class="bg-slate-900 p-8 rounded-lg flex items-center justify-center space-x-8">
+                            <svg class="w-16 h-16 text-red-500 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V7a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            <svg class="w-8 h-8 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            <img src="/landing-page-calculaai/images/logo-icone.png" alt="CalculaAi Icon" class="w-20 h-20">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+                     <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 md:order-last" data-aos="zoom-in-right">
+                        <div class="bg-slate-900 p-8 rounded-lg">
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-400">Custo Total</span>
+                                <span class="text-white">R$ 62,30</span>
+                            </div>
+                            <div class="w-full bg-slate-700 rounded-full h-3 my-2 flex">
+                                <div class="bg-blue-500 h-3 rounded-l-full" style="width: 65%"></div>
+                                <div class="bg-green-500 h-3 rounded-r-full" style="width: 35%"></div>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-slate-400">Lucro</span>
+                                <span class="text-green-400 font-bold">R$ 33,40</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-left">
+                        <h3 class="text-3xl font-bold my-3">🎯 Preço Justo e Lucrativo</h3>
+                        <p class="text-slate-400 text-lg">Calculamos o markup ideal, preço de venda sugerido, margem de lucro e a rentabilidade real de cada produto ou serviço.</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+                    <div data-aos="fade-right">
+                        <h3 class="text-3xl font-bold my-3">💡 Visão Financeira Clara</h3>
+                        <p class="text-slate-400 text-lg">Tenha relatórios visuais e análises rápidas do seu lucro líquido. Entenda a saúde financeira do seu negócio em poucos cliques.</p>
+                    </div>
+                    <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700" data-aos="zoom-in-left">
+                       <div class="bg-slate-900 p-8 rounded-lg">
+                            <div class="flex justify-between items-end h-32">
+                                <div class="w-1/4 bg-slate-700 rounded-t-lg relative" style="height: 40%"><span class="text-xs text-slate-400 absolute -bottom-5 left-1/2 -translate-x-1/2">Jan</span></div>
+                                <div class="w-1/4 bg-slate-700 rounded-t-lg relative" style="height: 60%"><span class="text-xs text-slate-400 absolute -bottom-5 left-1/2 -translate-x-1/2">Fev</span></div>
+                                <div class="w-1/4 bg-slate-700 rounded-t-lg relative" style="height: 50%"><span class="text-xs text-slate-400 absolute -bottom-5 left-1/2 -translate-x-1/2">Mar</span></div>
+                                <div class="w-1/4 gradient-bg rounded-t-lg relative" style="height: 80%"><span class="text-xs text-slate-400 absolute -bottom-5 left-1/2 -translate-x-1/2">Abr</span></div>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                     <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 md:order-last" data-aos="zoom-in-right">
+                        <div class="bg-slate-900 p-8 rounded-lg text-center">
+                           <svg class="w-16 h-16 text-pink-500 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                           <h4 class="text-lg font-semibold mb-2">Painel de Ideias</h4>
+                           <p class="text-slate-400 text-sm">Sua sugestão pode ser a próxima funcionalidade do sistema!</p>
+                        </div>
+                    </div>
+                    <div data-aos="fade-left">
+                        <h3 class="text-3xl font-bold my-3">🚀 Em Constante Evolução</h3>
+                        <p class="text-slate-400 text-lg">O sistema é construído junto com você! Temos uma página de ideias onde os clientes mandam sugestões, e nossa equipe estuda para acrescentar no sistema.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Social Proof Section =========== -->
+        <section id="depoimentos" class="py-24 bg-slate-800/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-3">Chega de trabalhar no escuro</h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto">Veja o que empreendedores como você estão dizendo.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-slate-900 p-8 rounded-xl border border-slate-700" data-aos="fade-up" data-aos-delay="100">
+                        <p class="text-slate-300 mb-6">"Eu sempre me perdia nas planilhas. Com o CalculaAi, em 10 minutos eu precifiquei toda a minha linha de bolos e descobri que estava pagando para trabalhar em alguns produtos!"</p>
+                        <div>
+                            <p class="font-bold">Juliana S.</p>
+                            <p class="text-sm gradient-text">Confeiteira</p>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="bg-slate-900 p-8 rounded-xl border border-slate-700" data-aos="fade-up" data-aos-delay="200">
+                        <p class="text-slate-300 mb-6">"Minha produção era uma bagunça, com receitas em cadernos velhos e papéis engordurados. Agora, eu salvo tudo no sistema e imprimo uma ficha técnica limpa para a cozinha todos os dias. Padronizou tudo!"</p>
+                        <div>
+                            <p class="font-bold">Ricardo F.</p>
+                            <p class="text-sm gradient-text">Dono de Padaria</p>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="bg-slate-900 p-8 rounded-xl border border-slate-700" data-aos="fade-up" data-aos-delay="300">
+                        <p class="text-slate-300 mb-6">"A função de controle de despesas abriu meus olhos. Consegui ver exatamente para onde meu dinheiro estava indo e otimizei meus custos. Recomendo demais."</p>
+                        <div>
+                            <p class="font-bold">Carla M.</p>
+                            <p class="text-sm gradient-text">Dona de Salão de Beleza</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Pricing Plans Section (UPDATED) =========== -->
+        <section id="planos" class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-3">Um plano para cada fase do seu negócio</h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto">Comece de graça e evolua conforme seu lucro aumenta.</p>
+                </div>
+
+                <!-- Pricing Toggle -->
+                <div class="flex justify-center items-center mb-12" data-aos="fade-up">
+                    <div class="bg-slate-900 p-1 rounded-full flex items-center space-x-1 relative">
+                        <button id="monthly-btn" class="toggle-btn px-6 py-2 rounded-full text-slate-300 font-semibold transition-colors">Mensal</button>
+                        <button id="yearly-btn" class="toggle-btn active px-6 py-2 rounded-full font-semibold transition-colors">Anual</button>
+                        <span class="absolute -top-5 right-0 gradient-bg text-white text-xs font-bold px-2 py-0.5 rounded-full transform rotate-6 -mr-4">Economize 22%</span>
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-3 gap-8 max-w-5xl mx-auto items-stretch">
+                    <!-- Plano Gratuito -->
+                    <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-2xl font-bold mb-2">Gratuito</h3>
+                        <p class="text-slate-400 mb-6">Para quem está começando.</p>
+                        <p class="text-4xl font-extrabold mb-6">R$0</p>
+                        <ul class="space-y-4 text-slate-300 mb-8 flex-grow">
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>30 cadastros de matéria-prima</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>5 receitas</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Monitore seu lucro</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Simulação de preço</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>1 bloco de markup</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Suporte humanizado</li>
+                        </ul>
+                        <a href="https://app.calculaaibr.com/" target="_blank" class="w-full text-center py-3 px-6 bg-slate-700 text-white font-bold rounded-lg hover:bg-slate-600 transition-colors mt-auto">Começar Agora</a>
+                    </div>
+                    <!-- Plano Profissional (Destaque) -->
+                    <div class="bg-slate-900 p-8 rounded-xl border border-slate-700 gradient-border-top flex flex-col relative transform lg:scale-105" data-aos="fade-up" data-aos-delay="200">
+                        <span class="absolute -top-4 right-8 gradient-bg text-white text-sm font-bold px-4 py-1 rounded-full">MAIS POPULAR</span>
+                        <h3 class="text-2xl font-bold mb-2 gradient-text">Profissional</h3>
+                        <p class="text-slate-400 mb-6">Para quem quer crescer com segurança.</p>
+                        <div class="price-container" data-monthly-price="49,90" data-yearly-price="39,90">
+                            <p class="text-4xl font-extrabold mb-1">
+                                R$<span class="price-value">39,90</span><span class="text-base font-normal text-slate-400">/mês</span>
+                            </p>
+                            <p class="price-desc text-slate-500 mb-6 text-sm">Cobrado R$ 478,80 de uma vez</p>
+                        </div>
+                        <ul class="space-y-4 text-slate-300 mb-8 flex-grow">
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Cadastro ilimitado de matéria-prima</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>60 receitas</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Movimentação de estoque</li>
+                             <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Monitore seu lucro</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Simulação de preço</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>3 blocos de markup</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Impressão de receitas em PDF (80/mês)</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Sistema em desenvolvimento</li>
+                        </ul>
+                        <a href="https://app.calculaaibr.com/" target="_blank" class="w-full text-center py-3 px-6 gradient-bg text-white font-bold rounded-lg hover:shadow-lg hover:shadow-pink-500/20 transition-all transform hover:-translate-y-0.5 mt-auto">Escolher Plano Profissional</a>
+                    </div>
+                    <!-- Plano Empresarial -->
+                    <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="text-2xl font-bold mb-2">Empresarial</h3>
+                        <p class="text-slate-400 mb-6">Para negócios com maior volume.</p>
+                         <div class="price-container" data-monthly-price="89,90" data-yearly-price="69,90">
+                            <p class="text-4xl font-extrabold mb-1">
+                                R$<span class="price-value">69,90</span><span class="text-base font-normal text-slate-400">/mês</span>
+                            </p>
+                            <p class="price-desc text-slate-500 mb-6 text-sm">Cobrado R$ 838,80 de uma vez</p>
+                        </div>
+                        <ul class="space-y-4 text-slate-300 mb-8 flex-grow">
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span><strong>Tudo do Profissional, mais:</strong></li>
+                             <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Receitas ilimitadas</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Blocos de markup ilimitados</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Impressão de receitas em PDF (ilimitado)</li>
+                            <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Suporte prioritário</li>
+                        </ul>
+                        <a href="https://contate.me/5562992622545" target="_blank" class="w-full text-center py-3 px-6 bg-slate-700 text-white font-bold rounded-lg hover:bg-slate-600 transition-colors mt-auto">Falar com Vendas</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== FAQ Section =========== -->
+        <section id="faq" class="py-24 bg-slate-800/50">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-3">Perguntas Frequentes</h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto">Ainda tem dúvidas? A gente te ajuda a esclarecer.</p>
+                </div>
+                <div class="space-y-4" data-aos="fade-up">
+                    <div class="faq-item bg-slate-900 rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6">
+                            <span class="text-lg font-semibold">O CalculaAi é seguro?</span>
+                            <svg class="faq-arrow w-6 h-6 shrink-0 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0">
+                            <p class="text-slate-400">Sim! Seus dados são criptografados e armazenados com segurança. Usamos as melhores práticas do mercado para garantir a privacidade e proteção das suas informações financeiras.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-slate-900 rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6">
+                            <span class="text-lg font-semibold">Posso cancelar quando quiser?</span>
+                            <svg class="faq-arrow w-6 h-6 shrink-0 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0">
+                            <p class="text-slate-400">Com certeza. Você pode cancelar sua assinatura a qualquer momento, sem burocracia ou taxas de cancelamento. Você continuará com acesso até o fim do período já pago.</p>
+                        </div>
+                    </div>
+                     <div class="faq-item bg-slate-900 rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6">
+                            <span class="text-lg font-semibold">Preciso instalar algum programa?</span>
+                            <svg class="faq-arrow w-6 h-6 shrink-0 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0">
+                            <p class="text-slate-400">Não! O CalculaAi é 100% online. Você pode acessá-lo de qualquer computador, tablet ou celular com acesso à internet, sem precisar baixar ou instalar nada.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Final CTA Section =========== -->
+        <section class="py-24">
+            <div class="container mx-auto px-6 text-center" data-aos="fade-up">
+                <img src="/landing-page-calculaai/images/logo-completa.png" alt="Logo CalculaAi" class="h-20 w-auto mx-auto mb-6">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">A ponte entre a planilha e o lucro.</h2>
+                <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
+                    Simples, acessível e com resultado direto para quem mais precisa: o pequeno empreendedor que quer lucrar mais e perder menos.
+                </p>
+                <a href="#planos" class="inline-block px-8 py-4 text-white font-bold rounded-lg gradient-bg hover:shadow-lg hover:shadow-pink-500/20 transition-all transform hover:-translate-y-0.5 text-lg">
+                    Comece a precificar do jeito certo
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========== Footer =========== -->
+    <footer class="bg-slate-800/50 border-t border-slate-700">
+        <div class="container mx-auto px-6 py-8 text-center text-slate-400 text-sm">
+            <p class="mb-2">&copy; 2025 CalculaAi. Todos os direitos reservados.</p>
+            <p class="max-w-3xl mx-auto text-slate-500">
+                O conteúdo, design e funcionalidades deste sistema são de propriedade exclusiva da CalculaAi e protegidos pelas leis de direitos autorais e de propriedade intelectual. É proibida a cópia, reprodução, distribuição ou modificação sem autorização expressa e por escrito.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center md:justify-start items-center space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-right" data-aos-delay="400">
-              <a href="#planos" class="w-full sm:w-auto px-8 py-4 text-white font-bold rounded-lg gradient-bg hover:shadow-lg hover:shadow-pink-500/20 transition-all transform hover:-translate-y-0.5 text-lg">
-                Conhecer Planos
-              </a>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="/landing-page-calculaai/termos-de-uso.pdf" download="Termos_de_Uso_CalculaAi.pdf" class="hover:text-white">Termos de Uso</a>
+                <a href="/landing-page-calculaai/politica-de-privacidade.pdf" download="Politica_de_Privacidade_CalculaAi.pdf" class="hover:text-white">Política de Privacidade</a>
+                <a href="https://app.calculaaibr.com/" target="_blank" class="hover:text-white">Login</a>
             </div>
-          </div>
-          <div class="hidden md:block" data-aos="fade-left">
-            <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 backdrop-blur-sm">
-              <div class="bg-slate-900 p-6 rounded-lg">
-                <div class="flex justify-between items-center mb-4">
-                  <span class="text-slate-300 font-semibold">Bolo de Brigadeiro (1.5kg)</span>
-                  <span class="px-2 py-1 text-xs bg-green-500/20 text-green-400 rounded-full">Lucro: 35%</span>
-                </div>
-                <div class="space-y-4 text-sm">
-                  <div class="flex justify-between items-center">
-                    <span class="text-slate-400">Insumos (Farinha, Ovos, etc.)</span>
-                    <span class="text-white font-medium">R$ 32,50</span>
-                  </div>
-                  <div class="w-full bg-slate-700 rounded-full h-2">
-                    <div class="bg-blue-500 h-2 rounded-full" style="width:50%"></div>
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <span class="text-slate-400">Custos Fixos (Gás, Energia)</span>
-                    <span class="text-white font-medium">R$ 18,80</span>
-                  </div>
-                  <div class="w-full bg-slate-700 rounded-full h-2">
-                    <div class="bg-pink-500 h-2 rounded-full" style="width:30%"></div>
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <span class="text-slate-400">Embalagem + Mão de Obra</span>
-                    <span class="text-white font-medium">R$ 15,00</span>
-                  </div>
-                  <div class="w-full bg-slate-700 rounded-full h-2">
-                    <div class="bg-orange-500 h-2 rounded-full" style="width:20%"></div>
-                  </div>
-                </div>
-                <hr class="border-slate-700 my-5" />
-                <div class="flex justify-between items-center">
-                  <span class="text-slate-400">Preço de Venda Ideal</span>
-                  <span class="text-2xl font-bold gradient-text">R$ 95,70</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
+    </footer>
 
-    <!-- Como funciona -->
-    <section id="como-funciona" class="py-24">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16" data-aos="fade-up">
-          <h2 class="text-3xl md:text-4xl font-bold mb-3">Sua precificação, finalmente <span class="gradient-text">simples e visual</span></h2>
-          <p class="text-slate-400 max-w-2xl mx-auto">Transforme dados confusos em decisões lucrativas.</p>
-        </div>
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 50,
+      });
 
-        <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
-          <div data-aos="fade-right">
-            <h3 class="text-3xl font-bold my-3">✅ Adeus, Planilhas!</h3>
-            <p class="text-slate-400 text-lg">Insira seus custos, insumos e despesas em um só lugar. O sistema faz os cálculos complexos por você, de forma automática e sem erros.</p>
-          </div>
-          <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700" data-aos="zoom-in-left">
-            <div class="bg-slate-900 p-8 rounded-lg flex items-center justify-center space-x-8">
-              <svg class="w-16 h-16 text-red-500 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V7a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-              <svg class="w-8 h-8 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-              <img src="/landing-page-calculaai/images/logo-icone.png" alt="CalculaAi Icon" class="w-20 h-20" />
-            </div>
-          </div>
-        </div>
+      // Pricing Toggle Logic
+      document.addEventListener('DOMContentLoaded', () => {
+        const monthlyBtn = document.getElementById('monthly-btn');
+        const yearlyBtn = document.getElementById('yearly-btn');
+        const priceContainers = document.querySelectorAll('.price-container');
 
-        <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
-          <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 md:order-last" data-aos="zoom-in-right">
-            <div class="bg-slate-900 p-8 rounded-lg">
-              <div class="flex justify-between items-center">
-                <span class="text-slate-400">Custo Total</span>
-                <span class="text-white">R$ 62,30</span>
-              </div>
-              <div class="w-full bg-slate-700 rounded-full h-3 my-2 flex">
-                <div class="bg-blue-500 h-3 rounded-l-full" style="width:65%"></div>
-                <div class="bg-green-500 h-3 rounded-r-full" style="width:35%"></div>
-              </div>
-              <div class="flex justify-between items-center text-sm">
-                <span class="text-slate-400">Lucro</span>
-                <span class="text-green-400 font-bold">R$ 33,40</span>
-              </div>
-            </div>
-          </div>
-          <div data-aos="fade-left">
-            <h3 class="text-3xl font-bold my-3">🎯 Preço Justo e Lucrativo</h3>
-            <p class="text-slate-400 text-lg">Calculamos o markup ideal, preço de venda sugerido, margem de lucro e a rentabilidade real de cada produto ou serviço.</p>
-          </div>
-        </div>
+        function updatePrices(billingPeriod) {
+            priceContainers.forEach(container => {
+                const priceValueEl = container.querySelector('.price-value');
+                const priceDescEl = container.querySelector('.price-desc');
+                
+                if (billingPeriod === 'monthly') {
+                    priceValueEl.textContent = container.dataset.monthlyPrice;
+                    priceDescEl.textContent = 'Cobrança mensal';
+                } else { // yearly
+                    priceValueEl.textContent = container.dataset.yearlyPrice;
+                    const yearlyTotal = (parseFloat(container.dataset.yearlyPrice.replace(',', '.')) * 12).toFixed(2).replace('.', ',');
+                    priceDescEl.textContent = `Cobrado R$ ${yearlyTotal} de uma vez`;
+                }
+            });
+        }
 
-        <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
-          <div data-aos="fade-right">
-            <h3 class="text-3xl font-bold my-3">💡 Visão Financeira Clara</h3>
-            <p class="text-slate-400 text-lg">Tenha relatórios visuais e análises rápidas do seu lucro líquido. Entenda a saúde financeira do seu negócio em poucos cliques.</p>
-          </div>
-          <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700" data-aos="zoom-in-left">
-            <div class="bg-slate-900 p-8 rounded-lg">
-              <div class="flex justify-between items-end h-32">
-                <div class="w-1/4 bg-slate-700 rounded-t-lg relative" style="height:40%"><span class="text-xs text-slate-400 absolute -bottom-5 left-1/2 -translate-x-1/2">Jan</span></div>
-                <div class="w-1/4 bg-slate-700 rounded-t-lg relative" style="height:60%"><span class="text-xs text-slate-400 absolute -bottom-5 left-1/2 -translate-x-1/2">Fev</span></div>
-                <div class="w-1/4 bg-slate-700 rounded-t-lg relative" style="height:50%"><span class="text-xs text-slate-400 absolute -bottom-5 left-1/2 -translate-x-1/2">Mar</span></div>
-                <div class="w-1/4 gradient-bg rounded-t-lg relative" style="height:80%"><span class="text-xs text-slate-400 absolute -bottom-5 left-1/2 -translate-x-1/2">Abr</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 md:order-last" data-aos="zoom-in-right">
-            <div class="bg-slate-900 p-8 rounded-lg text-center">
-              <svg class="w-16 h-16 text-pink-500 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
-              <h4 class="text-lg font-semibold mb-2">Painel de Ideias</h4>
-              <p class="text-slate-400 text-sm">Sua sugestão pode ser a próxima funcionalidade do sistema!</p>
-            </div>
-          </div>
-          <div data-aos="fade-left">
-            <h3 class="text-3xl font-bold my-3">🚀 Em Constante Evolução</h3>
-            <p class="text-slate-400 text-lg">O sistema é construído junto com você! Temos uma página de ideias onde os clientes mandam sugestões, e nossa equipe estuda para acrescentar no sistema.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Depoimentos -->
-    <section id="depoimentos" class="py-24 bg-slate-800/50">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16" data-aos="fade-up">
-          <h2 class="text-3xl md:text-4xl font-bold mb-3">Chega de trabalhar no escuro</h2>
-          <p class="text-slate-400 max-w-2xl mx-auto">Veja o que empreendedores como você estão dizendo.</p>
-        </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-slate-900 p-8 rounded-xl border border-slate-700" data-aos="fade-up" data-aos-delay="100">
-            <p class="text-slate-300 mb-6">"Eu sempre me perdia nas planilhas. Com o CalculaAi, em 10 minutos eu precifiquei toda a minha linha de bolos e descobri que estava pagando para trabalhar em alguns produtos!"</p>
-            <div><p class="font-bold">Juliana S.</p><p class="text-sm gradient-text">Confeiteira</p></div>
-          </div>
-          <div class="bg-slate-900 p-8 rounded-xl border border-slate-700" data-aos="fade-up" data-aos-delay="200">
-            <p class="text-slate-300 mb-6">"Minha produção era uma bagunça, com receitas em cadernos velhos e papéis engordurados. Agora, eu salvo tudo no sistema e imprimo uma ficha técnica limpa para a cozinha todos os dias. Padronizou tudo!"</p>
-            <div><p class="font-bold">Ricardo F.</p><p class="text-sm gradient-text">Dono de Padaria</p></div>
-          </div>
-          <div class="bg-slate-900 p-8 rounded-xl border border-slate-700" data-aos="fade-up" data-aos-delay="300">
-            <p class="text-slate-300 mb-6">"A função de controle de despesas abriu meus olhos. Consegui ver exatamente para onde meu dinheiro estava indo e otimizei meus custos. Recomendo demais."</p>
-            <div><p class="font-bold">Carla M.</p><p class="text-sm gradient-text">Dona de Salão de Beleza</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Planos -->
-    <section id="planos" class="py-24">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16" data-aos="fade-up">
-          <h2 class="text-3xl md:text-4xl font-bold mb-3">Um plano para cada fase do seu negócio</h2>
-          <p class="text-slate-400 max-w-2xl mx-auto">Comece de graça e evolua conforme seu lucro aumenta.</p>
-        </div>
-
-        <!-- Toggle -->
-        <div class="flex justify-center items-center mb-12" data-aos="fade-up">
-          <div class="bg-slate-900 p-1 rounded-full flex items-center space-x-1 relative">
-            <button id="monthly-btn" class="toggle-btn px-6 py-2 rounded-full text-slate-300 font-semibold transition-colors">Mensal</button>
-            <button id="yearly-btn" class="toggle-btn active px-6 py-2 rounded-full font-semibold transition-colors">Anual</button>
-            <span class="absolute -top-5 right-0 gradient-bg text-white text-xs font-bold px-2 py-0.5 rounded-full transform rotate-6 -mr-4">Economize 20%</span>
-          </div>
-        </div>
-
-        <div class="grid lg:grid-cols-3 gap-8 max-w-5xl mx-auto items-stretch">
-          <!-- Gratuito -->
-          <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 flex flex-col" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="text-2xl font-bold mb-2">Gratuito</h3>
-            <p class="text-slate-400 mb-6">Para quem está começando.</p>
-            <p class="text-4xl font-extrabold mb-6">R$0</p>
-            <ul class="space-y-4 text-slate-300 mb-8 flex-grow">
-              <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>30 cadastros de matéria-prima</li>
-              <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>5 receitas</li>
-              <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Monitore seu lucro</li>
-              <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Simulação de preço</li>
-              <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>1 bloco de markup</li>
-              <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Suporte humanizado</li>
-            </ul>
-            <a href="https://calculaaibr.com/" target="_blank" class="w-full text-center py-3 px-6 bg-slate-700 text-white font-bold rounded-lg hover:bg-slate-600 transition-colors mt-auto">Começar Agora</a>
-          </div>
-
-          <!-- Profissional -->
-          <div class="bg-slate-900 p-8 rounded-xl border border-slate-700 gradient-border-top flex flex-col relative transform lg:scale-105" data-aos="fade-up" data-aos-delay="200">
-            <span class="absolute -top-4 right-8 gradient-bg text-white text-sm font-bold px-4 py-1 rounded-full">MAIS POPULAR</span>
-            <h3 class="text-2xl font-bold mb-2 gradient-text">Profissional</h3>
-            <p class="text-slate-400 mb-6">Para quem quer crescer com segurança.</p>
-
-            <div class="price-container" data-monthly-price="49,90" data-annual-total="478,80">
-              <p class="text-4xl font-extrabold mb-1">
-                R$<span class="price-value">478,80</span><span class="price-unit text-base font-normal text-slate-400">/Ano</span>
-              </p>
-              <p class="price-desc text-slate-500 mb-6 text-sm">no plano anual</p>
-            </div>
-
-            <ul class="space-y-4 text-slate-300 mb-8 flex-grow">
-              <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Cadastro ilimitado de matéria-prima</li>
-              <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>60 receitas</li>
-              <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Movimentação de estoque</li>
-              <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Monitore seu lucro</li>
-              <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Simulação de preço</li>
-              <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>3 blocos de markup</li>
-              <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Impressão de receitas em PDF (80/mês)</li>
-              <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Sistema em desenvolvimento</li>
-            </ul>
-            <!-- Botão com id para JS trocar os links -->
-            <a id="btnPro" href="https://buy.stripe.com/00w7sK617gbF6kNdgJcZa05"
-               class="w-full text-center py-3 px-6 gradient-bg text-white font-bold rounded-lg hover:shadow-lg hover:shadow-pink-500/20 transition-all transform hover:-translate-y-0.5 mt-auto">
-              Escolher Plano Profissional
-            </a>
-          </div>
-
-          <!-- Empresarial -->
-          <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 flex flex-col" data-aos="fade-up" data-aos-delay="300">
-            <h3 class="text-2xl font-bold mb-2">Empresarial</h3>
-            <p class="text-slate-400 mb-6">Para negócios com maior volume.</p>
-
-            <div class="price-container" data-monthly-price="89,90" data-annual-total="838,80">
-              <p class="text-4xl font-extrabold mb-1">
-                R$<span class="price-value">838,80</span><span class="price-unit text-base font-normal text-slate-400">/Ano</span>
-              </p>
-              <p class="price-desc text-slate-500 mb-6 text-sm">no plano anual</p>
-            </div>
-
-            <ul class="space-y-4 text-slate-300 mb-8 flex-grow">
-              <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span><strong>Tudo do Profissional, mais:</strong></li>
-              <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Receitas ilimitadas</li>
-              <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Blocos de markup ilimitados</li>
-              <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Impressão de receitas em PDF (ilimitado)</li>
-              <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✔</span>Suporte prioritário</li>
-            </ul>
-            <!-- Substitui "Falar com Vendas" por botão com link -->
-            <a id="btnEmp" href="https://buy.stripe.com/7sY14m1KRgbF6kN0tXcZa04"
-               class="w-full text-center py-3 px-6 gradient-bg text-white font-bold rounded-lg hover:shadow-lg hover:shadow-pink-500/20 transition-all transform hover:-translate-y-0.5 mt-auto">
-              Escolher Plano Empresarial
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="py-24 bg-slate-800/50">
-      <div class="container mx-auto px-6 max-w-3xl">
-        <div class="text-center mb-16" data-aos="fade-up">
-          <h2 class="text-3xl md:text-4xl font-bold mb-3">Perguntas Frequentes</h2>
-          <p class="text-slate-400 max-w-2xl mx-auto">Ainda tem dúvidas? A gente te ajuda a esclarecer.</p>
-        </div>
-        <div class="space-y-4" data-aos="fade-up">
-          <div class="faq-item bg-slate-900 rounded-lg">
-            <button class="faq-question w-full flex justify-between items-center text-left p-6">
-              <span class="text-lg font-semibold">O CalculaAi é seguro?</span>
-              <svg class="faq-arrow w-6 h-6 shrink-0 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-            </button>
-            <div class="faq-answer hidden p-6 pt-0">
-              <p class="text-slate-400">Sim! Seus dados são criptografados e armazenados com segurança. Usamos as melhores práticas do mercado para garantir a privacidade e proteção das suas informações financeiras.</p>
-            </div>
-          </div>
-          <div class="faq-item bg-slate-900 rounded-lg">
-            <button class="faq-question w-full flex justify-between items-center text-left p-6">
-              <span class="text-lg font-semibold">Posso cancelar quando quiser?</span>
-              <svg class="faq-arrow w-6 h-6 shrink-0 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-            </button>
-            <div class="faq-answer hidden p-6 pt-0">
-              <p class="text-slate-400">Com certeza. Você pode cancelar sua assinatura a qualquer momento, sem burocracia ou taxas de cancelamento. Você continuará com acesso até o fim do período já pago.</p>
-            </div>
-          </div>
-          <div class="faq-item bg-slate-900 rounded-lg">
-            <button class="faq-question w-full flex justify-between items-center text-left p-6">
-              <span class="text-lg font-semibold">Preciso instalar algum programa?</span>
-              <svg class="faq-arrow w-6 h-6 shrink-0 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-            </button>
-            <div class="faq-answer hidden p-6 pt-0">
-              <p class="text-slate-400">Não! O CalculaAi é 100% online. Você pode acessá-lo de qualquer computador, tablet ou celular com acesso à internet, sem precisar baixar ou instalar nada.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA final -->
-    <section class="py-24">
-      <div class="container mx-auto px-6 text-center" data-aos="fade-up">
-        <img src="/landing-page-calculaai/images/logo-completa.png" alt="Logo CalculaAi" class="h-20 w-auto mx-auto mb-6" />
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">A ponte entre a planilha e o lucro.</h2>
-        <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
-          Simples, acessível e com resultado direto para quem mais precisa: o pequeno empreendedor que quer lucrar mais e perder menos.
-        </p>
-        <a href="#planos" class="inline-block px-8 py-4 text-white font-bold rounded-lg gradient-bg hover:shadow-lg hover:shadow-pink-500/20 transition-all transform hover:-translate-y-0.5 text-lg">
-          Comece a precificar do jeito certo
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-slate-800/50 border-t border-slate-700">
-    <div class="container mx-auto px-6 py-8 text-center text-slate-400 text-sm">
-      <p class="mb-2">&copy; 2025 CalculaAi. Todos os direitos reservados.</p>
-      <p class="max-w-3xl mx-auto text-slate-500">
-        O conteúdo, design e funcionalidades deste sistema são de propriedade exclusiva da CalculaAi e protegidos pelas leis de direitos autorais e de propriedade intelectual. É proibida a cópia, reprodução, distribuição ou modificação sem autorização expressa e por escrito.
-      </p>
-      <div class="mt-4 flex justify-center space-x-6">
-        <a href="/landing-page-calculaai/termos-de-uso.pdf" download="Termos_de_Uso_CalculaAi.pdf" class="hover:text-white">Termos de Uso</a>
-        <a href="/landing-page-calculaai/politica-de-privacidade.pdf" download="Politica_de_Privacidade_CalculaAi.pdf" class="hover:text-white">Política de Privacidade</a>
-        <a href="https://app.calculaaibr.com/" target="_blank" class="hover:text-white">Login</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 800, once: true, offset: 50 });
-
-    // === LINKS REAIS DA STRIPE ===
-    const LINKS = {
-      monthly: {
-        pro: "https://buy.stripe.com/aFa28qcpv9Nh6kN7WpcZa02",   // Pro Mensal
-        emp: "https://buy.stripe.com/bJe28qahn1gLeRj7WpcZa03"    // Empresarial Mensal
-      },
-      annual: {
-        pro: "https://buy.stripe.com/00w7sK617gbF6kNdgJcZa05",   // Pro Anual
-        emp: "https://buy.stripe.com/7sY14m1KRgbF6kN0tXcZa04"    // Empresarial Anual
-      }
-    };
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const monthlyBtn = document.getElementById('monthly-btn');
-      const yearlyBtn  = document.getElementById('yearly-btn');
-      const priceContainers = document.querySelectorAll('.price-container');
-      const btnPro = document.getElementById('btnPro');
-      const btnEmp = document.getElementById('btnEmp');
-
-      function applyPlanLinks(period) {
-        const cycle = (period === 'monthly') ? 'monthly' : 'annual';
-        if (btnPro) btnPro.href = LINKS[cycle].pro;
-        if (btnEmp) btnEmp.href = LINKS[cycle].emp;
-      }
-
-      function updatePrices(billingPeriod) {
-        priceContainers.forEach(container => {
-          const priceValueEl = container.querySelector('.price-value');
-          const priceUnitEl  = container.querySelector('.price-unit');
-          const priceDescEl  = container.querySelector('.price-desc');
-
-          if (billingPeriod === 'monthly') {
-            priceValueEl.textContent = container.dataset.monthlyPrice; // ex: 49,90
-            priceUnitEl.textContent  = '/mês';
-            priceDescEl.textContent  = 'no plano mensal';
-          } else {
-            priceValueEl.textContent = container.dataset.annualTotal; // ex: 478,80
-            priceUnitEl.textContent  = '/Ano';
-            priceDescEl.textContent  = 'no plano anual';
-          }
+        monthlyBtn.addEventListener('click', () => {
+            monthlyBtn.classList.add('active');
+            yearlyBtn.classList.remove('active');
+            updatePrices('monthly');
         });
-      }
 
-      monthlyBtn.addEventListener('click', () => {
-        monthlyBtn.classList.add('active');
-        yearlyBtn.classList.remove('active');
-        updatePrices('monthly');
-        applyPlanLinks('monthly');
-      });
+        yearlyBtn.addEventListener('click', () => {
+            yearlyBtn.classList.add('active');
+            monthlyBtn.classList.remove('active');
+            updatePrices('yearly');
+        });
 
-      yearlyBtn.addEventListener('click', () => {
-        yearlyBtn.classList.add('active');
-        monthlyBtn.classList.remove('active');
+        // Initialize with yearly prices shown
         updatePrices('yearly');
-        applyPlanLinks('yearly');
-      });
 
-      // Inicia com "Anual" ativo (como na UI)
-      if (yearlyBtn.classList.contains('active')) {
-        updatePrices('yearly');
-        applyPlanLinks('yearly');
-      } else {
-        updatePrices('monthly');
-        applyPlanLinks('monthly');
-      }
+        // FAQ Accordion Logic
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            const arrow = item.querySelector('.faq-arrow');
 
-      // FAQ accordion
-      const faqItems = document.querySelectorAll('.faq-item');
-      faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        const answer   = item.querySelector('.faq-answer');
-        const arrow    = item.querySelector('.faq-arrow');
+            question.addEventListener('click', () => {
+                const isOpen = !answer.classList.contains('hidden');
+                
+                // Close all other answers
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.querySelector('.faq-answer').classList.add('hidden');
+                        otherItem.querySelector('.faq-arrow').classList.remove('rotate-180');
+                    }
+                });
 
-        question.addEventListener('click', () => {
-          faqItems.forEach(other => {
-            if (other !== item) {
-              other.querySelector('.faq-answer').classList.add('hidden');
-              other.querySelector('.faq-arrow').classList.remove('rotate-180');
-            }
-          });
-          answer.classList.toggle('hidden');
-          arrow.classList.toggle('rotate-180');
+                // Toggle current answer
+                answer.classList.toggle('hidden');
+                arrow.classList.toggle('rotate-180');
+            });
         });
       });
-    });
-  </script>
+    </script>
 </body>
 </html>
+
