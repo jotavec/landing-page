@@ -38,11 +38,6 @@ body {
     animation: pulse-shine 4s linear infinite;
 }
 
-@keyframes pulse-shine {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
-}
-
 /* Benefit Cards */
 .benefit-card {
     background-color: #FFFFFF;
@@ -51,6 +46,14 @@ body {
     border: 1px solid #E5E7EB;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
     text-align: center;
+}
+
+header span {
+    background: linear-gradient(90deg, #4f46e5, #ec4899, #f97316);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 }
 
 /* Testimonial Cards */
@@ -116,6 +119,7 @@ body {
 .faq-arrow.rotate-180 {
     transform: rotate(180deg);
 }
+
 
 
 
