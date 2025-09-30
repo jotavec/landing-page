@@ -38,9 +38,30 @@
                 <a href="#planos" class="hover:text-orange-500 transition-colors">Planos</a>
                 <a href="#faq" class="hover:text-orange-500 transition-colors">Dúvidas</a>
             </nav>
-            <a href="https://calculaaibr.com/" target="_blank" class="px-5 py-2 text-white font-semibold rounded-full gradient-bg shadow-lg shadow-orange-500/20 transition-all transform hover:-translate-y-0.5">
-                Acessar Sistema
-            </a>
+            <div class="hidden md:block">
+                <a href="https://calculaaibr.com/" target="_blank" class="px-5 py-2 text-white font-semibold rounded-full gradient-bg shadow-lg shadow-orange-500/20 transition-all transform hover:-translate-y-0.5">
+                    Acessar Sistema
+                </a>
+            </div>
+             <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <nav class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+                <a href="#para-quem-e" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-500 hover:bg-gray-50">Para Quem É</a>
+                <a href="#vantagens" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-500 hover:bg-gray-50">Vantagens</a>
+                <a href="#depoimentos" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-500 hover:bg-gray-50">Depoimentos</a>
+                <a href="#planos" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-500 hover:bg-gray-50">Planos</a>
+                <a href="#faq" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-500 hover:bg-gray-50">Dúvidas</a>
+                <a href="https://calculaaibr.com/" target="_blank" class="block w-full text-center mt-4 px-5 py-2 text-white font-semibold rounded-full gradient-bg shadow-lg shadow-orange-500/20">
+                    Acessar Sistema
+                </a>
+            </nav>
         </div>
     </header>
 
@@ -107,7 +128,7 @@
         <section class="py-24 bg-gray-50">
             <div class="container mx-auto px-6">
                  <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div data-aos="fade-right" class="h-[600px] rounded-lg shadow-xl overflow-hidden">
+                    <div data-aos="fade-right" class="h-[400px] md:h-[600px] rounded-lg shadow-xl overflow-hidden">
                         <img src="/landing-page-calculaai/images/empreendedora-pensativa.jpg" alt="Empreendedora pensativa em seu café" class="w-full h-full object-cover object-center">
                     </div>
                     <div data-aos="fade-left">
@@ -133,7 +154,7 @@
                     <h2 class="text-3xl md:text-4xl font-bold mb-3">Descubra um caminho simples para a <span class="gradient-text">precificação correta</span> e o controle de custos</h2>
                     <p class="text-gray-600 max-w-3xl mx-auto">Com a Calcula Ai, você tem a solução completa para otimizar a precificação e o gerenciamento de custos no seu negócio de alimentação.</p>
                 </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="advantage-card-improved" data-aos="fade-up" data-aos-delay="100">
                         <div class="advantage-icon">✓</div>
                         <div>
@@ -191,7 +212,7 @@
                 <div class="text-center mb-16" data-aos="fade-up">
                     <h2 class="text-3xl md:text-4xl font-bold mb-3">Para quem a <span class="gradient-text">Calcula Ai</span> foi criada?</h2>
                 </div>
-                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     <div class="audience-profile-improved" data-aos="fade-up">
                         <div class="advantage-icon">🍰</div>
                         <div>
@@ -252,7 +273,7 @@
                     <h2 class="text-3xl md:text-4xl font-bold mb-3">Quem usa, <span class="gradient-text">recomenda</span></h2>
                     <p class="text-gray-600 max-w-2xl mx-auto">Veja o que empreendedores como você estão dizendo.</p>
                 </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
                         <p class="text-gray-700 mb-6">"Eu sempre me perdia nas planilhas. Com o CalculaAi, em 10 minutos eu precifiquei toda a minha linha de bolos e descobri que estava pagando para trabalhar!"</p>
                         <div>
@@ -294,7 +315,7 @@
                     </div>
                 </div>
 
-                <div class="grid lg:grid-cols-3 gap-8 max-w-5xl mx-auto items-stretch">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto items-stretch">
                     <div class="plan-card" data-aos="fade-up" data-aos-delay="100">
                         <h3 class="text-2xl font-bold mb-2">Gratuito</h3>
                         <p class="text-gray-500 mb-6">Para quem está começando.</p>
