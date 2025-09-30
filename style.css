@@ -10,7 +10,7 @@ body {
 
 /* Custom gradient text */
 .gradient-text {
-    background: linear-gradient(90deg, #F97316, #EA580C); /* Orange Gradient */
+    background: linear-gradient(90deg, #4f46e5, #ec4899, #f97316); /* Official Logo Gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -19,7 +19,7 @@ body {
 
 /* Custom gradient for buttons */
 .gradient-bg {
-    background: linear-gradient(90deg, #F97316, #EA580C); /* Orange Gradient */
+    background: linear-gradient(90deg, #4f46e5, #ec4899, #f97316); /* Official Logo Gradient */
 }
 
 /* CTA Pulse Animation */
@@ -116,6 +116,7 @@ body {
 .faq-arrow.rotate-180 {
     transform: rotate(180deg);
 }
+
 
 
 
