@@ -3,7 +3,7 @@ body {
     font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #f8f7f4; /* Off-white / Icy White */
+    background-color: #F9FAFB; /* Icy White */
     position: relative;
     overflow-x: hidden;
 }
@@ -116,4 +116,5 @@ body {
 .faq-arrow.rotate-180 {
     transform: rotate(180deg);
 }
+
 
