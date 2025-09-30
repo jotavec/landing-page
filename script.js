@@ -7,6 +7,13 @@ AOS.init({
 
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {
+    // Mobile Menu Toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
   // Pricing Toggle Logic
   const monthlyBtn = document.getElementById('monthly-btn');
   const yearlyBtn = document.getElementById('yearly-btn');
@@ -42,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
       });
 
-      // Update Stripe links and show/hide yearly bonus
+      // Update Stripe links and show/hide bonus
       if (billingPeriod === 'monthly') {
           proLink.href = stripeLinks.pro.monthly;
           entLink.href = stripeLinks.ent.monthly;
@@ -77,18 +84,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const arrow = item.querySelector('.faq-arrow');
 
       question.addEventListener('click', () => {
-          const isOpen = answer.style.display === 'block';
+          const isOpen = !answer.classList.contains('hidden');
           
           // Close all other open answers
           faqItems.forEach(otherItem => {
               if (otherItem !== item) {
-                  otherItem.querySelector('.faq-answer').style.display = 'none';
+                  otherItem.querySelector('.faq-answer').classList.add('hidden');
                   otherItem.querySelector('.faq-arrow').classList.remove('rotate-180');
               }
           });
 
           // Toggle the clicked answer
-          answer.style.display = isOpen ? 'none' : 'block';
+          answer.classList.toggle('hidden');
           arrow.classList.toggle('rotate-180');
       });
   });
