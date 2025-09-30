@@ -107,6 +107,14 @@ body::before {
     z-index: -1;
 }
 
+header a span {
+    background: linear-gradient(90deg, #c3c1ff, #e9a8d0, #ffc7a1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
 /* Minimalist gradient border for the highlighted plan */
 .gradient-border-top {
     border-top: 3px solid;
