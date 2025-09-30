@@ -3,26 +3,23 @@ body {
     font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #FDFCFB; /* Light cream background */
-    color: #4A4A4A; /* Warm dark gray for text */
+    background-color: #f8f7f4; /* Off-white / Icy White */
     position: relative;
     overflow-x: hidden;
 }
 
-/* Removed Aurora Borealis and Grid background */
-
-/* Custom gradient text with new warm colors */
+/* Custom gradient text */
 .gradient-text {
-    background: linear-gradient(90deg, #FF6B6B, #FFC371); /* Red-Orange to Yellow Gradient */
+    background: linear-gradient(90deg, #F97316, #EA580C); /* Orange Gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
 }
 
-/* Custom gradient for buttons and borders with new warm colors */
+/* Custom gradient for buttons */
 .gradient-bg {
-    background: linear-gradient(90deg, #FF6B6B, #FFC371);
+    background: linear-gradient(90deg, #F97316, #EA580C); /* Orange Gradient */
 }
 
 /* CTA Pulse Animation */
@@ -46,45 +43,76 @@ body {
     100% { transform: translateX(100%); }
 }
 
-/* Monitor Frame effect for light theme */
-.monitor-frame {
-    background: #FFFFFF;
-    border-radius: 1.5rem;
-    padding: 1rem;
-    border: 1px solid #EAEAEA;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+/* Benefit Cards */
+.benefit-card {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    text-align: center;
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid #E5E7EB;
+}
+
+/* Plan Cards */
+.plan-card {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid #E5E7EB;
+    display: flex;
+    flex-direction: column;
+}
+.plan-card-popular {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 2px solid #F97316;
     position: relative;
-}
-
-.monitor-frame::before {
-    content: '';
-    position: absolute;
-    inset: -2px;
-    border-radius: 1.5rem;
-    background: linear-gradient(90deg, #FF6B6B, #FFC371);
-    filter: blur(20px);
-    opacity: 0.3;
-    z-index: -1;
-}
-
-header a span {
-    color: #4A4A4A; /* Use solid color for better readability on light bg */
-}
-
-/* Minimalist gradient border for the highlighted plan */
-.gradient-border-top {
-    border-top: 3px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(90deg, #FF6B6B, #FFC371);
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    display: flex;
+    flex-direction: column;
 }
 
 /* Styles for the active toggle button */
 .toggle-btn.active {
-    background: linear-gradient(90deg, #FF6B6B, #FFC371);
+    background: linear-gradient(90deg, #F97316, #EA580C);
     color: white;
 }
 
-/* FAQ Arrow rotation */
+/* FAQ Item */
+.faq-item {
+    background-color: #FFFFFF;
+    border-radius: 0.5rem;
+    border: 1px solid #E5E7EB;
+}
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 1.5rem;
+}
+.faq-arrow {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+    transition: transform 0.3s;
+}
+.faq-answer {
+    display: none;
+    padding: 1.5rem;
+    padding-top: 0;
+}
 .faq-arrow.rotate-180 {
     transform: rotate(180deg);
 }
