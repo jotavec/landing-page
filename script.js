@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const priceContainers = document.querySelectorAll('.price-container');
   const proLink = document.getElementById('professional-plan-link');
   const entLink = document.getElementById('enterprise-plan-link');
+  const yearlyBonus = document.querySelector('.yearly-bonus');
 
   // Stripe Checkout Links
   const stripeLinks = {
@@ -41,13 +42,15 @@ document.addEventListener('DOMContentLoaded', () => {
           }
       });
 
-      // Update Stripe links
+      // Update Stripe links and show/hide yearly bonus
       if (billingPeriod === 'monthly') {
           proLink.href = stripeLinks.pro.monthly;
           entLink.href = stripeLinks.ent.monthly;
+          if(yearlyBonus) yearlyBonus.style.display = 'none';
       } else { // yearly
           proLink.href = stripeLinks.pro.yearly;
           entLink.href = stripeLinks.ent.yearly;
+          if(yearlyBonus) yearlyBonus.style.display = 'flex';
       }
   }
 
@@ -74,18 +77,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const arrow = item.querySelector('.faq-arrow');
 
       question.addEventListener('click', () => {
-          const isOpen = !answer.classList.contains('hidden');
+          const isOpen = answer.style.display === 'block';
           
           // Close all other open answers
           faqItems.forEach(otherItem => {
               if (otherItem !== item) {
-                  otherItem.querySelector('.faq-answer').classList.add('hidden');
+                  otherItem.querySelector('.faq-answer').style.display = 'none';
                   otherItem.querySelector('.faq-arrow').classList.remove('rotate-180');
               }
           });
 
           // Toggle the clicked answer
-          answer.classList.toggle('hidden');
+          answer.style.display = isOpen ? 'none' : 'block';
           arrow.classList.toggle('rotate-180');
       });
   });
